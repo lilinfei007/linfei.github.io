@@ -1,6 +1,3 @@
-import { ArrowRight, Play } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
-
 export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center hero-bg overflow-hidden">
