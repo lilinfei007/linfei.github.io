@@ -1,22 +1,20 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
-import { useState } from 'react'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 const contactInfo = [
   {
     icon: MapPin,
     title: '公司地址',
-    content: '山东省济南市高新区科技园路88号',
+    content: '湖北省武汉市黄陂区蔡家榨镇兴崛大道27号附9号',
   },
   {
     icon: Phone,
     title: '联系电话',
-    content: '400-888-6666',
+    content: '400-816-0061',
   },
   {
     icon: Mail,
-    title: '电子邮箱',
-    content: 'contact@lvfeng.com',
+    title: 'QQ咨询',
+    content: '450505620',
   },
   {
     icon: Clock,
@@ -26,24 +24,6 @@ const contactInfo = [
 ]
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    alert('感谢您的留言，我们会尽快与您联系！')
-    setFormData({ name: '', phone: '', email: '', message: '' })
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
   return (
     <section id="contact" className="py-24 section-light">
       <div className="container mx-auto px-4">
@@ -61,109 +41,30 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-              {contactInfo.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-2xl p-6 border border-border/50 card-hover"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-foreground font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.content}</p>
-                </div>
-              ))}
+        {/* Contact Info Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {contactInfo.map((item, index) => (
+            <div
+              key={index}
+              className="bg-card rounded-2xl p-6 border border-border/50 card-hover text-center"
+            >
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                <item.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-foreground font-semibold mb-2">{item.title}</h3>
+              <p className="text-muted-foreground">{item.content}</p>
             </div>
+          ))}
+        </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-card rounded-2xl overflow-hidden border border-border/50 h-64">
-              <div className="w-full h-full bg-muted flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-primary/40 mx-auto mb-3" />
-                  <p className="text-muted-foreground">山东省济南市高新区科技园路88号</p>
-                </div>
-              </div>
+        {/* Map Placeholder */}
+        <div className="bg-card rounded-2xl overflow-hidden border border-border/50 h-80">
+          <div className="w-full h-full bg-muted flex items-center justify-center">
+            <div className="text-center">
+              <MapPin className="w-16 h-16 text-primary/40 mx-auto mb-4" />
+              <p className="text-muted-foreground text-lg">湖北省武汉市黄陂区蔡家榨镇兴崛大道27号附9号</p>
+              <p className="text-muted-foreground/60 text-sm mt-2">点击查看地图导航</p>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-card rounded-3xl p-8 md:p-10 shadow-card border border-border/50">
-            <h3 className="text-2xl font-bold text-foreground mb-6">在线留言</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    您的姓名
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                    placeholder="请输入姓名"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    联系电话
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                    placeholder="请输入电话"
-                    required
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  电子邮箱
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                  placeholder="请输入邮箱"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  留言内容
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
-                  placeholder="请输入您的留言或咨询内容..."
-                  required
-                />
-              </div>
-
-              <Button type="submit" variant="default" size="lg" className="w-full">
-                <Send className="w-5 h-5 mr-2" />
-                提交留言
-              </Button>
-            </form>
           </div>
         </div>
       </div>

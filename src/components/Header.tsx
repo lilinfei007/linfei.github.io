@@ -48,7 +48,7 @@ export function Header() {
             "text-xl font-bold transition-colors",
             isScrolled ? "text-foreground" : "text-primary-foreground"
           )}>
-            绿丰农业
+            福欧泰化工
           </span>
         </a>
 

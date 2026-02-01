@@ -21,7 +21,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-harvest rounded-full animate-pulse" />
             <span className="text-primary-foreground/90 text-sm font-medium">
-              专业化肥生产商 · 值得信赖的农业伙伴
+              专业化工生产商 · 值得信赖的合作伙伴
             </span>
           </div>
 
@@ -34,24 +34,12 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto animate-fade-in animation-delay-400 leading-relaxed">
-            绿丰农业科技专注化肥研发生产20余年，以科学配方和先进工艺，
+            福欧泰化工专注化肥研发生产20余年，以科学配方和先进工艺，
             为全国农户提供高效、环保的肥料解决方案
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animation-delay-600">
-            <Button variant="hero" size="xl" className="group">
-              了解产品
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="hero-outline" size="xl" className="group">
-              <Play className="mr-2 w-5 h-5" />
-              观看企业视频
-            </Button>
-          </div>
-
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 animate-fade-in animation-delay-600">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 animate-fade-in animation-delay-600">
             {[
               { number: '20+', label: '年行业经验' },
               { number: '500+', label: '产品种类' },

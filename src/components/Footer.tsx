@@ -26,7 +26,7 @@ export function Footer() {
               <div className="p-2 rounded-xl bg-primary">
                 <Leaf className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">绿丰农业</span>
+              <span className="text-xl font-bold">福欧泰化工</span>
             </div>
             <p className="text-secondary-foreground/70 mb-6 leading-relaxed max-w-sm">
               专注化肥研发生产20余年，以科技创新驱动农业发展，
@@ -35,15 +35,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-secondary-foreground/70">
                 <Phone className="w-4 h-4" />
-                <span>400-888-6666</span>
+                <span>400-816-0061</span>
               </div>
               <div className="flex items-center gap-3 text-secondary-foreground/70">
                 <Mail className="w-4 h-4" />
-                <span>contact@lvfeng.com</span>
+                <span>QQ: 450505620</span>
               </div>
               <div className="flex items-center gap-3 text-secondary-foreground/70">
                 <MapPin className="w-4 h-4" />
-                <span>山东省济南市高新区科技园路88号</span>
+                <span>湖北省武汉市黄陂区蔡家榨镇兴崛大道27号附9号</span>
               </div>
             </div>
           </div>
@@ -73,11 +73,11 @@ export function Footer() {
       <div className="border-t border-secondary-foreground/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/50">
-            <p>© 2024 绿丰农业科技有限公司 版权所有</p>
+            <p>© 2024 福欧泰化工科技有限公司 版权所有</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-secondary-foreground transition-colors">隐私政策</a>
               <a href="#" className="hover:text-secondary-foreground transition-colors">使用条款</a>
-              <a href="#" className="hover:text-secondary-foreground transition-colors">鲁ICP备12345678号</a>
+              <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary-foreground transition-colors">鄂ICP备2024076967号-1</a>
             </div>
           </div>
         </div>

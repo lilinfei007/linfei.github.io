@@ -47,11 +47,11 @@ export function Advantages() {
             企业优势
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            为什么选择<span className="text-gradient">绿丰农业</span>
+            为什么选择<span className="text-gradient">福欧泰化工</span>
           </h2>
           <div className="divider-gradient mx-auto mb-6" />
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            凭借雄厚的技术实力和完善的服务体系，绿丰农业已成为众多农户的信赖之选
+            凭借雄厚的技术实力和完善的服务体系，福欧泰化工已成为众多农户的信赖之选
           </p>
         </div>
 
